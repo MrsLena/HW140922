@@ -21,13 +21,15 @@ public class Main {
 
     private static void lastvalue(String FindStr) {
         List<String> list = List.of("Jack:room 10","Nick:room 20","Jack:room 1","Mike:room3","Nick:room 40");
-       System.out.println(list.stream()
-               .reduce((i1,i2) -> {
-                   if(  i2.contains(FindStr)  )
-                       return i2;
-                   else
-                       return i1;
-               }).orElse(null));
+        String FindO = list.stream()
+                .reduce((i1,i2) -> {
+                    if(  i2.contains(FindStr)  )
+                        return i2;
+                    else
+                        return i1;
+                }).orElse(null);
+
+       System.out.println(FindO.substring(FindO.indexOf(":")+1));
 
 
     }
