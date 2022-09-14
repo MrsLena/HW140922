@@ -27,9 +27,9 @@ public class Main {
                         return i2;
                     else
                         return i1;
-                }).orElse(null);
+                }).orElse("");
 
-       System.out.println(FindO.substring(FindO.indexOf(":")+1));
+       System.out.println( FindO=="" ?  "" :  FindO.substring(FindO.indexOf(":")+1));
 
 
     }
